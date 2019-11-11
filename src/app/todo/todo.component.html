@@ -1,0 +1,13 @@
+<section class="taskBox">
+  <h1>{{ title }}</h1>
+  <p>A place to store your todos</p>
+  <input type="text" placeholder="Filter your to-dos" />
+  <ol>
+    <li *ngFor="let task of tasks">
+      <button class="completeButton">{{ completeButton }}</button>{{ task }}
+      <button class="xButton">{{ xButton }}</button>
+    </li>
+  </ol>
+  <input type="text" placeholder="Add your to-dos" />
+  <button class="addButton">{{ addButton }}</button>
+</section>

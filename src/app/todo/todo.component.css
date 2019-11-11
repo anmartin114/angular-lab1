@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+body {
+  font-weight: 300;
+  background-image: linear-gradient(to right, #f857a6, #ff5858);
+}
+
+.taskBox {
+  background-color: #eee;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  margin: 20px;
+  padding: 20px;
+  font-family: "Open Sans";
+}
+
+.completeButton {
+  background-color: #eee;
+  color: #ff69b4;
+  border: solid 1px #ff69b4;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 3px;
+}
+
+.addButton {
+  background-color: #ff1493;
+  color: #eee;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.xButton {
+  background-color: #eee;
+  border: none;
+  float: right;
+  margin-right: 10px;
+}
+
+input {
+  color: #bbb;
+  padding: 10px;
+  border: 0.5px solid #bbb;
+  background-color: #eee;
+  width: 95%;
+  border-radius: 5px;
+}
+
+input::placeholder {
+  color: #bbb;
+  font-size: 20px;
+}
