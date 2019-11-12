@@ -1,13 +1,24 @@
 <section class="taskBox">
-  <h1>{{ title }}</h1>
-  <p>A place to store your todos</p>
-  <input type="text" placeholder="Filter your to-dos" />
+  <h1>ToDo List</h1>
+  <form>
+    <p>A place to store your to-dos</p>
+    <input type="text" placeholder="Filter your to-dos" />
+  </form>
   <ol>
-    <li *ngFor="let task of tasks">
-      <button class="completeButton">{{ completeButton }}</button>{{ task }}
-      <button class="xButton">{{ xButton }}</button>
+    <li *ngFor="let todoItem of getFilteredTodos()">
+      <button
+        class="completeButton"
+        type="button"
+        *ngIf="!todoItem.completed"
+        (click)="done(todoItem)"
+      >
+        Complete</button
+      ><span [ngClass]="{ done: todoItem.completed }">{{ todoItem.task }}</span>
+      <button class="xButton" (click)="delete(todoItem)">x</button>
     </li>
   </ol>
-  <input type="text" placeholder="Add your to-dos" />
-  <button class="addButton">{{ addButton }}</button>
+  <form (ngSubmit)="addTask()">
+    <input name="add" type="text" placeholder="Add your to-dos" />
+    <button type="submit" class="addButton" (click)="addTask()">Add</button>
+  </form>
 </section>
